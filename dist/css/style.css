@@ -1,0 +1,22 @@
+html, body, #root, .jumbotron {
+	height: 100%
+}
+
+form {
+	margin-top: 25%;
+}
+
+.jumbotron {
+	margin: 0;
+}
+
+.list-group {
+	position: absolute; 
+	width: 93%;
+	max-height: 246px;
+	overflow-y: scroll;
+}
+
+.list-group-item {
+	cursor: pointer;
+}
