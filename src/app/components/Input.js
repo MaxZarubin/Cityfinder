@@ -13,7 +13,8 @@ export default class Input extends React.Component
 		this.props.onChangeValue(e);
 	}
 
-	render(){
+	render()
+	{
 		return(
 			<input 
 			type="text" 

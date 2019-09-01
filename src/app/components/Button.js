@@ -1,9 +1,11 @@
 import React from 'react';
 
 
-export default function Button(props)
+const Button = ({btnName}) =>
 {
-		return (
-			<button type="submit" className="btn btn-primary">{props.btnName}</button>
-		)
+	return (
+		<button type="submit" className="btn btn-primary">{btnName}</button>
+	)
 }
+
+export default Button;

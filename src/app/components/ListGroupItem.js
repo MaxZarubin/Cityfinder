@@ -1,11 +1,11 @@
 import React from 'react';
 
 
-export default class ListGroupItem extends React.Component
+const ListGroupItem = ({res}) =>
 {
-	render(){
-		return (
-			<li className="list-group-item">{this.props.res}</li>
-		)
-	}
+	return (
+		<li className="list-group-item">{res}</li>
+	)
 }
+
+export default ListGroupItem;

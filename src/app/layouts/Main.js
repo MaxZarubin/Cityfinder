@@ -2,19 +2,19 @@ import React from 'react';
 
 import Form from '../components/Form';
 
-export default class Main extends React.Component
+const Main = ({title, placeholder, btnName}) =>
 {
-	render(){
 		return (
 		<div className="jumbotron jumbotron-fluid">
 		  	<div className="container col-4">
 				<Form 
-				title={this.props.title} 
-				placeholder={this.props.placeholder} 
-				btnName={this.props.btnName}
+				title={title} 
+				placeholder={placeholder} 
+				btnName={btnName}
 				/>
 	  		</div>
 	  	</div>
 		)
-	}
 }
+
+export default Main;
