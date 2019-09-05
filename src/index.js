@@ -5,7 +5,7 @@ import Main from './app/layouts/Main';
 
 const app = document.getElementById('root');
 
-const formTitle = 'Finde Country',
+const formTitle = 'Find Country',
 	  inputPlaceHolder = 'Search',
 	  buttonName = 'Submit';
 

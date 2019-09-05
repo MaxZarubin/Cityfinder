@@ -19,7 +19,7 @@ export default class Input extends React.Component
 			<input 
 			type="text" 
 			className="form-control" 
-			onInput={this.handleInput} 
+			onChange={this.handleInput} 
 			placeholder={this.props.placeholder} 
 			/>
 		)

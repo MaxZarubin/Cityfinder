@@ -30,18 +30,17 @@ export default class Form extends React.Component
 		});
 	}
 
-	onChangeValue(e){
-		this.setState({
-			val: e.target.value
-		});
-		this.search();
+	onChangeValue(e){				
+    	this.setState({
+    		val: e.target.value
+    	}, this.search);
 	}
 
 	search() {
 		const { countries, val } = this.state;
 
 		let res = countries.filter(item => {
-			if(item.name.match(new RegExp(`^${val}`, "i")) && val){
+			if(item.name.match(new RegExp(`^${val}`, "i")) && val){					
 				return item.name;
 			};
 		});
@@ -52,16 +51,17 @@ export default class Form extends React.Component
 	}
 
 	render(){
-		let flag = this.state.searchResult.length ? true : false;
-		const {title, placeholder, btnName} = this.props,
-			  {searchResult, value} = this.state;
+
+		const {title, placeholder, btnName} = this.props;
+		const {searchResult, val} = this.state;
+		let flag = searchResult.length ? true : false;	  
 
 		return (
 			<form>
 				<h3>{title}</h3>
 				<div className="form-group">
-					<Input placeholder={placeholder} onChangeValue={this.onChangeValue}/>
-				    { flag && <ListGroup searchResult={searchResult} value={value}/> }
+					<Input placeholder={placeholder} onChangeValue={this.onChangeValue} />
+				    { flag && <ListGroup searchResult={searchResult} /> }
 				</div>
 				<Button btnName={btnName} />
 			</form>
